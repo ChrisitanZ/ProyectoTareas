@@ -19,7 +19,7 @@ public class UsuarioRepository : IUsuarioRepository
         return await _context.Usuarios.ToListAsync();
     }
 
-    public async Task<Usuario> GetByIdAsync(int id)
+    public async Task<Usuario?> GetByIdAsync(int id)
     {
         return await _context.Usuarios.FindAsync(id);
     }
@@ -46,7 +46,7 @@ public class UsuarioRepository : IUsuarioRepository
         }
     }
 
-    public async Task<Usuario> AuthenticateAsync(string correoElectronico, string contrasena)
+    public async Task<Usuario?> AuthenticateAsync(string correoElectronico, string contrasena)
     {
         return await _context.Usuarios
             .FirstOrDefaultAsync(u => u.CorreoElectronico == correoElectronico && u.Contrasena == contrasena);
