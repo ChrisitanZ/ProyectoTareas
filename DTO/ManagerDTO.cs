@@ -1,5 +1,4 @@
 ﻿namespace Proyecto_de_Tareas.DTO;
-
 public class ManagerDTO
 {
     public int Id { get; set; }

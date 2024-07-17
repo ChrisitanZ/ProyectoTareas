@@ -1,5 +1,4 @@
 ﻿namespace Proyecto_de_Tareas.DTO;
-
 public class UsuarioDTO
 {
     public int Id { get; set; }
