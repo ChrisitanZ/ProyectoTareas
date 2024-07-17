@@ -3,8 +3,8 @@
 public class Tarea
 {
     public int Id { get; set; }
-    public string Titulo { get; set; } = string.Empty; // Valor predeterminado
-    public string Descripcion { get; set; } = string.Empty;
+    public string Titulo { get; set; } 
+    public string Descripcion { get; set; } 
     public DateTime FechaLimite { get; set; }
     public int UsuarioAsignadoId { get; set; }
     public EstadoTarea Estado { get; set; }
