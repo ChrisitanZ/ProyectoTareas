@@ -19,7 +19,7 @@ public class ManagerRepository : IManagerRepository
         return await _context.Managers.ToListAsync();
     }
 
-    public async Task<Manager?> GetByIdAsync(int id)
+    public async Task<Manager> GetByIdAsync(int id)
     {
         return await _context.Managers.FindAsync(id);
     }
@@ -46,7 +46,7 @@ public class ManagerRepository : IManagerRepository
         }
     }
 
-    public async Task<Manager?> GetByNameAsync(string nombre)
+    public async Task<Manager> GetByNameAsync(string nombre)
     {
         return await _context.Managers.FirstOrDefaultAsync(m => m.Nombre == nombre);
     }
